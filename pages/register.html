@@ -46,25 +46,30 @@
                     <div class="input">
                         <label for="name">Họ và tên</label>
                         <input type="text" name="Họ và tên" id="name" placeholder="Nguyễn Văn A">
+                        <p id="notificationNameError"></p>
                     </div>
                     <div class="input">
                         <label for="email">Email</label>
                         <input type="email" name="Email" id="email" placeholder="email@example.com">
+                        <p id="notificationEmailError"></p>
                     </div>
-                    <div class="input">
+                    <div class="input" id="input_1">
                         <label for="password">Mật khẩu</label>
                         <input type="password" name="Mật khẩu" id="password">
                         <img src="../assets/icons/icon_hide.png" alt="" id="icon_1">
+                        <p id="notificationPasswordError"></p>
                     </div>
-                    <div class="input">
+                    <div class="input" id="input_2">
                         <label for="re_password">Xác nhận mật khẩu</label>
                         <input type="password" name="Xác nhận mật khẩu" id="re_password">
                         <img src="../assets/icons/icon_hide.png" alt="" id="icon_2">
+                        <p id="notificationRePasswordError"></p>
                     </div>
                     <div id="confirm">
                         <input type="checkbox" name="" id="check">
                         <label for="check" id="commit"><span>Tôi đồng ý với <a href="">điều khoản sử dụng</a> và chính sách bảo mật
                                 của CineEdu.</span></label>
+                        <p id="notificationCheckBoxError"></p>
                     </div>
                     <button id="btn_register">Đăng ký <img src="../assets/icons/icon_arrow.png" alt=""></button>
                 </div>
@@ -78,6 +83,7 @@
             </div>
         </div>
     </main>
+    <script src="../js/register.js"></script>
 </body>
 
 </html>

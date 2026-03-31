@@ -199,15 +199,21 @@ input {
     width: 19px;
     height: 17px;
 }
+#input_1 {
+    position: relative;
+}
 #icon_1 {
     position: absolute;
-    top: 356px;
-    right: 50px;
+    bottom: 22px;
+    right: 10px;
+}
+#input_2 {
+    position: relative;
 }
 #icon_2 {
     position: absolute;
-    top: 448px;
-    right: 50px;
+    bottom: 22px;;
+    right: 10px;
 }
 #confirm {
     display: flex;
@@ -298,4 +304,34 @@ input {
     font-style: normal;
     position: relative;
     top: 80px;
+}
+#notificationNameError {
+    color: red;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+#notificationEmailError {
+    color: red;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+#notificationPasswordError {
+    color: red;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+#notificationRePasswordError {
+    color: red;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+#notificationCheckBoxError {
+    color: red;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
 }

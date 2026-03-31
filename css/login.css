@@ -279,3 +279,15 @@ input[type="checkbox"] {
     font-optical-sizing: auto;
     font-style: normal;
 }
+#notificationEmailError {
+    color: red;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+#notificationPasswordError {
+    color: red;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
