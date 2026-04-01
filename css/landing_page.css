@@ -190,6 +190,7 @@
     line-height: 24px;
     font-weight: 700;
     color: #FFFFFF;
+    cursor: pointer;
 }
 .trailer {
     width: 182px;
@@ -202,6 +203,7 @@
     border: 1px solid #4B5563;
     backdrop-filter: blur(4px);
     align-items: center;
+    cursor: pointer;
 }
 .trailer img {
     width: 20px;
@@ -216,7 +218,7 @@
     font-weight: 500;
     color: #FFFFFF;
 }
-#body_page1 {
+.body_page1 {
     padding-top: 64px;
     padding-bottom: 64px;
     background: #111827;
@@ -268,6 +270,9 @@
 }
 .film img {
     width: 100%;
+    height: 390px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
     object-fit: cover;
 }
 .film p {
@@ -317,6 +322,7 @@
     font-weight: 500;
     color: red;
     transition: all 0.2s linear;
+    cursor: pointer;
 }
 .body_page2 {
     background: #151D2E;
@@ -551,4 +557,71 @@ footer {
     font-family: "Inter", sans-serif;
     font-optical-sizing: auto;
     font-style: normal;
+}
+
+.body_page1 {
+    position: relative;
+    width: 100%;
+}
+#main_movie {
+    display: flex;
+    gap: 16px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+}
+#main_movie::-webkit-scrollbar {
+    display: none;
+}   
+.btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    background: rgba(0,0,0,0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+#prev {
+    position: absolute;
+    left: 10px;
+}
+
+#next {
+    position: absolute;
+    right: 10px;
+}
+.video_trailer_film {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.video_content {
+    position: relative;
+    width: 1280px;
+    height: 700px;
+}
+.close {
+    color: white;
+    font-size: 24px;
+    font-weight: 600;
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    cursor: pointer;
+}
+iframe {
+    width: 100%;
+    height: 100%;
 }
