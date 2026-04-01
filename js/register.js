@@ -14,8 +14,37 @@ let notificationRePasswordError = document.getElementById("notificationRePasswor
 let checkbox = document.getElementById("check");
 let btnToLogin = document.getElementById("btn_login");
 btnToLogin.addEventListener("click" , () => {
-    window.location.href = "../pages/login.html";
+    window.location.href = "../pages/login.html"; 
 });
+let data = [
+    {
+        id: 1,
+        fullName: "Admin Chính",
+        email: "LQTuan@rikkei.edu.vn",
+        password: "Admin123456",
+        role: "admin",
+        createdAt: "2026-03-03T12:26:21.617Z",
+        isActive: true
+    },
+    {
+        id: 2,
+        fullName: "Nguyễn Văn A",
+        email: "nguyenvana@example.com",
+        password: "Matkhau123",
+        role: "admin",
+        createdAt: "2026-03-01T12:26:21.617Z",
+        isActive: true
+    },
+    {
+        id: 3,
+        fullName: "Trần Thị B",
+        email: "tranthib@example.com",
+        password: "12345678",
+        role: "admin",
+        createdAt: "2026-03-03T12:26:21.617Z",
+        isActive: false
+    }
+];
 const checkValidateRegister = () => {
     if (inputName.value == "") {
         notificationNameError.innerText = "Họ và tên không hợp lệ";
@@ -76,6 +105,18 @@ const checkValidateRegister = () => {
     else {
         notificationCheckBoxError.innerText = "";
     }
+    let now = new Date();
+    let newObject = {
+        id: Date.now(),
+        fullName: inputName.value,
+        email: inputEmail.value,
+        password: inputPassword.value,
+        role: "admin",
+        createdAt: `${now.getFullYear()}-${now.getMonth()}-${now.getDate()}T${now.getHours()}:${now.getMinutes()}:${now.getSeconds()}.617Z`,
+        isActive: false
+    };
+    data.push(newObject);
+    localStorage.setItem("data" , JSON.stringify(data));
     inputName.value = "";
     inputEmail.value = "";
     inputPassword.value = "";

@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
     <link rel="stylesheet" href="../css/landing_page.css">
 </head>
+
 <body>
     <header id="header">
         <div class="container_1">
@@ -21,62 +24,169 @@
                 <a href="" class="link_pages">Phim</a>
                 <a href="" class="link_pages">Rạp chiếu</a>
             </div>
-            <div class="button_gotologin">
-                <button id="btn_login">Đăng Nhập / Đăng Ký</button>
-            </div>
+        </div>
+        <div class="button_gotologin">
+            <button id="btn_login">Đăng Nhập / Đăng Ký</button>
         </div>
     </header>
     <main>
         <div class="first_page">
-            <div id="background">
-                <img src="../assets/images/picture_2.png" alt="">
-                <div id="note">
-                    <div id="status">
-                        <img src="../assets/icons/icon_record.png" alt="">
-                        <p>Đang Thịnh Hành</p>
+            <img src="../assets/images/picture_2.png" alt="" class="picture">
+            <div id="note" class="note">
+                <div id="status">
+                    <img src="../assets/icons/icon_record.png" alt="">
+                    <p>Đang Thịnh Hành</p>
+                </div>
+                <h1>Dune: Hành Tinh Cát</h1>
+                <h3>Câu chuyện về cuộc sống hành trình của Pau Atreides, một chàng trai trẻ tài năng và rực rỡ, sinh
+                    ra với số phận vĩ đại vượt quá sự hiểu biết của mình.</h3>
+                <div id="information_film">
+                    <div id="book_film">
+                        <button class="book_film">
+                            <img src="../assets/icons/icon_ticket.png" alt="">
+                            <p>Đặt Vé Ngay</p>
+                        </button>
                     </div>
-                    <h1>Dune: Hành Tinh Cát</h1>
-                    <h3>Câu chuyện về cuộc sống hành trình của Pau Atreides, một chàng trai trẻ tài năng và rực rỡ, sinh ra với số phận vĩ đại vượt quá sự hiểu biết của mình.</h3>
-                    <div id="information_film">
-                        <div id="book_film">
-                            <button class="book_film">
-                                <img src="../assets/icons/icon_ticket.png" alt="">
-                                <p>Đặt Vé Ngay</p>
-                            </button>
-                        </div>
-                        <div id="trailer_film">
-                            <button class="trailer">
-                                <img src="../assets/icons/icon_continue.png" alt="">
-                                <p>Xem Trailer</p>
-                            </button>
-                        </div>
+                    <div id="trailer_film">
+                        <button class="trailer">
+                            <img src="../assets/icons/icon_continue.png" alt="">
+                            <p>Xem Trailer</p>
+                        </button>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="body_page1">
+        <div id="body_page1">
             <div class="active_film">
                 <p>Phim Đang Chiếu</p>
-                <div id="see_all">
+                <div class="see_all">
                     <p>Xem tất cả</p>
                     <img src="../assets/icons/icon_arow_red.png" alt="">
                 </div>
             </div>
-            <div class="main_movie">
+            <div id="main_movie">
                 <div class="film">
                     <img src="../assets/images/picture_3.png" alt="">
+                    <p class="name">Dune</p>
+                    <div class="category">
+                        <i class="fa-regular fa-clock"></i>
+                        <p>155 phút • Hành động, Viễn tưỡng</p>
+                    </div>
+                    <button class="btn_buy_ticket">Mua vé</button>
                 </div>
                 <div class="film">
                     <img src="../assets/images/picture_4.png" alt="">
+                    <p class="name">The Batman</p>
+                    <div class="category">
+                        <i class="fa-regular fa-clock"></i>
+                        <p>176 phút • Hành đông, Tội phạm</p>
+                    </div>
+                    <button class="btn_buy_ticket">Mua vé</button>
                 </div>
                 <div class="film">
                     <img src="../assets/images/picture_8.png" alt="">
+                    <p class="name">Spider-Man: No Way Home</p>
+                    <div class="category">
+                        <i class="fa-regular fa-clock"></i>
+                        <p>148 phút • Hành động, Phiêu lưu</p>
+                    </div>
+                    <button class="btn_buy_ticket">Mua vé</button>
                 </div>
                 <div class="film">
                     <img src="../assets/images/picture_9.png" alt="">
+                    <p class="name">The Matrix Resurrections</p>
+                    <div class="category">
+                        <i class="fa-regular fa-clock"></i>
+                        <p>148 phút • Hành động, Viễn tưởng</p>
+                    </div>
+                    <button class="btn_buy_ticket">Mua vé</button>
                 </div>
             </div>
         </div>
+        <div class="body_page2">
+            <h1>Ưu đãi đặc biệt</h1>
+            <p>Khám phá các chương trình khuyến mãi và ưu đãi hấp dẫn dành riêng cho bạn.</p>
+            <div id="endow">
+                <div class="card">
+                    <div class="theme">
+                        <img src="../assets/icons/icon_student.png" alt="">
+                    </div>
+                    <h2>Giảm 20% cho sinh viên</h2>
+                    <p>Áp dụng cho tất cả các suất chiếu 2D từ thứ 2 đến thứ 5 hàng tuần khi mang theo thẻ sinh
+                        viên.
+                    </p>
+                    <a href="">Xem chi tiết</a>
+                </div>
+                <div class="card">
+                    <div class="theme">
+                        <img src="../assets/icons/icon_combo.png" alt="">
+                    </div>
+                    <h2>Combo Bắp Nước Tiết Kiệm</h2>
+                    <p>Tiết kiệm đến 30% khi mua vé online kèm combo bắp nước Sweet Combo.</p>
+                    <a href="">Xem chi tiết</a>
+                </div>
+                <div class="card">
+                    <div class="theme">
+                        <img src="../assets/icons/icon_vip.png" alt="">
+                    </div>
+                    <h2>Thẻ Thành Viên Vip</h2>
+                    <p>Tích điểm đổi quà, miễn phí nâng cấp bắp nước và vé mời vào xem phim định kỳ.</p>
+                    <a href="">Xem chi tiết</a>
+                </div>
+            </div>
+        </div>
+        <div class="body_page3">
+            <h1>Tại sao chọn RikkeiEdu?</h1>
+            <div class="why">
+                <div class="reason">
+                    <img src="../assets/icons/icon_film.png" alt="">
+                    <h2>Trải nghiệm đỉnh cao</h2>
+                    <p>Hệ thống âm thanh Doiby Atmos và màn hình IMAX mang đến trải nghiệm điện ảnh sống động nhất.
+                    </p>
+                </div>
+                <div class="reason">
+                    <img src="../assets/icons/icon_price.png" alt="">
+                    <h2>Giá vé hợp lý</h2>
+                    <p>Cam kết giá vé tốt nhất cho học sinh, sinh viên và thành viên thân thiết với nhiều ưu đãi.
+                    </p>
+                </div>
+                <div class="reason">
+                    <img src="../assets/icons/icon_fast.png" alt="">
+                    <h2>Đặt vé nhanh chóng</h2>
+                    <p>Hệ thống đặt vé online tiện lợi, chọn ghế dễ dàng và thanh toán an toàn chỉ trong vài bước.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="body_page4">
+            <div class="introduce_register">
+                <h2>Đăng ký thành viên CineEdu</h2>
+                <p>Nhận ưu đãi vé xem phim và bắp nước hàng tuần</p>
+            </div>
+            <div class="form_register">
+                <input type="email" name="" id="email" placeholder="Email của bạn">
+                <button id="btn_register">Đăng ký</button>
+            </div>
+        </div>
     </main>
+    <footer>
+        <div id="link">
+            <div class="path">
+                <a href="">Liên hệ</a>
+                <a href="">Điều khoản</a>
+                <a href="">Tuyển dụng</a>
+                <a href="">Về chúng tôi</a>
+            </div>
+            <div id="logo">
+                <img src="../assets/icons/icon_facebook.png" alt="">
+                <img src="../assets/icons/icon_instagram.png" alt="">
+            </div>
+        </div>
+        <hr>
+        <div class="copyright">
+            <p>© 2026 RikkeiEdu. Tất cả quyền được bảo mật .</p>
+        </div>
+    </footer>
 </body>
+
 </html>
