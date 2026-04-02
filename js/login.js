@@ -96,6 +96,7 @@ const checkValidateLogin = () => {
         if (inputEmail.value == element.email && inputPassword.value == element.password) {
             showToastCorrect("Đăng nhập thành công", "Chào mừng bạn đến với trang web Rikkei.");
             count ++;
+            window.location.href = "../pages/movie_management_page.html";
             inputEmail.value = "";
             inputPassword.value = "";
         }

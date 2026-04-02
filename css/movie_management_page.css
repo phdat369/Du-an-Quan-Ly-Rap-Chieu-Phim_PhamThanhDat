@@ -6,6 +6,7 @@
 body {
     display: flex;
     height: 100vh;
+    position: relative;
 }
 .left_page {
     width: 20%;
@@ -452,4 +453,670 @@ tbody tr td {
     background: #E60A151A;
     border: 1px solid #E60A15;
     color: #E60A15;
+}
+.add_new_film {
+    position: absolute;
+    top: 35px;
+    left: 560px;
+    width: 1200px;
+    background: #1A0B0C;
+    border: 1px solid #553A3B;
+    border-radius: 12px;
+    display: none;
+    z-index: 100;
+}
+.head_task_add_film {
+    border-bottom: 1px solid #553A3B;
+    padding: 20px 24px;
+    display: flex;
+    justify-content: space-between;
+}
+.head_task_add_film h1 {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 25px;
+    color: #F1F5F9;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+.head_task_add_film p {
+    width: 15px;
+    height: 15px;
+    color: #94A3B8;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    cursor: pointer;
+}
+.form_input_add {
+    display: flex;
+    flex-direction: column;
+    padding: 15px 40px;
+    gap: 15px;
+}
+.input_name_film {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.form_input_add label {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 21px;
+    color: #E2E8F0;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+.obligatory {
+    color: #E70814;
+}
+.form_input_add input {
+    background: #2C1516;
+    border: 1px solid #553A3B;
+    border-radius: 8px;
+    height: 50px;
+    padding-left: 20px;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    color: #E2E8F0;
+}
+.input_category_and_duration_film {
+    display: flex;
+    justify-content: space-between;
+}
+.input_category_film {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.input_category_film select {
+    background: #2C1516;
+    border: 1px solid #553A3B;
+    border-radius: 8px;
+    height: 50px;
+    color: #E2E8F0;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    width: 540px;
+    padding-left: 20px;
+}
+.input_duration_film {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.input_duration_film input {
+    background: #2C1516;
+    border: 1px solid #553A3B;
+    border-radius: 8px;
+    height: 50px;
+    color: #E2E8F0;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    width: 540px;
+}
+.input_premiere_and_status_film {
+    display: flex;
+    justify-content: space-between;
+}
+.input_premiere_film {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.input_premiere_film input {
+    background: #2C1516;
+    border: 1px solid #553A3B;
+    border-radius: 8px;
+    height: 50px;
+    padding-left: 20px;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    color: #E2E8F0;
+    width: 540px;
+}
+.input_status_film {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.input_status_film select {
+    background: #2C1516;
+    border: 1px solid #553A3B;
+    border-radius: 8px;
+    height: 50px;
+    color: #E2E8F0;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    width: 540px;
+    padding-left: 20px;
+}
+.input_price_ticket_and_poster3x4 {
+    display: flex;
+    justify-content: space-between;
+}
+.input_price {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.input_price input {
+    background: #2C1516;
+    border: 1px solid #553A3B;
+    border-radius: 8px;
+    height: 50px;
+    padding-left: 20px;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    color: #E2E8F0;
+    width: 540px;
+}
+.input_poster_3x4 {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.input_poster_3x4 input {
+    background: #2C1516;
+    border: 1px solid #553A3B;
+    border-radius: 8px;
+    height: 50px;
+    padding-left: 20px;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    color: #E2E8F0;
+    width: 540px;
+}
+.input_poster_url {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.input_poster_url div {
+    display: flex;
+    justify-content: space-between;
+}
+#poster_url {
+    background: #2C1516;
+    border: 1px solid #553A3B;
+    border-radius: 8px;
+    height: 50px;
+    padding-left: 20px;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    color: #E2E8F0;
+    width: 950px;
+}
+.up_picture {
+    background: #FFFFFF0D;
+    border: 1px solid #553A3B;
+    width: 135px;
+    height: 50px;
+    border-radius: 8px;
+    padding: 13px 16px;
+    color: #E2E8F0;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    cursor: pointer;
+}
+.input_trailer_and_coverage {
+    display: flex;
+    justify-content: space-between;
+}
+.input_trailer {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.input_trailer input {
+    background: #2C1516;
+    border: 1px solid #553A3B;
+    border-radius: 8px;
+    height: 50px;
+    color: #E2E8F0;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    width: 540px;
+}
+.input_converage {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.input_converage select {
+    background: #2C1516;
+    border: 1px solid #553A3B;
+    border-radius: 8px;
+    height: 50px;
+    color: #E2E8F0;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    width: 540px;
+    padding-left: 20px;
+}
+.input_description {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+textarea {
+    background: #2C1516;
+    border: 1px solid #553A3B;
+    border-radius: 8px;
+    height: 50px;
+    padding-left: 20px;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    color: #E2E8F0;
+    padding-top: 20px;
+    height: 100px;
+}
+.foot_task_add_film {
+    background: #FFFFFF0D;
+    border-top: 1px solid #553A3B;
+    height: 80px;
+    padding: 25px 24px;
+    position: relative;
+}
+.btn_cancel_and_commit {
+    position: absolute;
+    right: 50px;
+    display: flex;
+    gap: 15px;
+}
+.btn_cancel {
+    border: 1px solid #475569;
+    border-radius: 8px;
+    padding: 10px 24px;
+    cursor: pointer;
+}
+.btn_commit {
+    box-shadow: 0px 4px 6px -4px #E7081433;
+    box-shadow: 0px 10px 15px -3px #E7081433;
+    background: #FFFFFF01;
+    border-radius: 8px;
+    background: #E70814;
+    color: #FFFFFF;
+    padding: 10px 24px;
+    cursor: pointer;
+}
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    z-index: 10;
+    display: none;
+}
+
+
+
+
+.update_film {
+    position: absolute;
+    top: 35px;
+    left: 560px;
+    width: 1200px;
+    background: #1A0B0C;
+    border: 1px solid #553A3B;
+    border-radius: 12px;
+    z-index: 100;
+    display: none;
+}
+.head_task_update_film {
+    border-bottom: 1px solid #553A3B;
+    padding: 20px 24px;
+    display: flex;
+    justify-content: space-between;
+}
+.head_task_update_film h1 {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 25px;
+    color: #F1F5F9;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+.head_task_update_film p {
+    width: 15px;
+    height: 15px;
+    color: #94A3B8;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    cursor: pointer;
+}
+.form_input_update {
+    display: flex;
+    flex-direction: column;
+    padding: 15px 40px;
+    gap: 15px;
+}
+.input_name_film_update {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.form_input_update label {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 21px;
+    color: #E2E8F0;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+.form_input_update input {
+    background: #2C1516;
+    border: 1px solid #553A3B;
+    border-radius: 8px;
+    height: 50px;
+    padding-left: 20px;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    color: #E2E8F0;
+}
+.input_category_and_duration_film_update {
+    display: flex;
+    justify-content: space-between;
+}
+.input_category_film_update {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.input_category_film_update select {
+    background: #2C1516;
+    border: 1px solid #553A3B;
+    border-radius: 8px;
+    height: 50px;
+    color: #E2E8F0;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    width: 540px;
+    padding-left: 20px;
+}
+.input_duration_film_update {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.input_duration_film_update input {
+    background: #2C1516;
+    border: 1px solid #553A3B;
+    border-radius: 8px;
+    height: 50px;
+    color: #E2E8F0;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    width: 540px;
+}
+.input_premiere_and_status_film_update {
+    display: flex;
+    justify-content: space-between;
+}
+.input_premiere_film_update {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.input_premiere_film_update input {
+    background: #2C1516;
+    border: 1px solid #553A3B;
+    border-radius: 8px;
+    height: 50px;
+    padding-left: 20px;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    color: #E2E8F0;
+    width: 540px;
+}
+.input_status_film_update {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.input_status_film_update select {
+    background: #2C1516;
+    border: 1px solid #553A3B;
+    border-radius: 8px;
+    height: 50px;
+    color: #E2E8F0;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    width: 540px;
+    padding-left: 20px;
+}
+.input_price_ticket_and_poster3x4_update {
+    display: flex;
+    justify-content: space-between;
+}
+.input_price_update {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.input_price_update input {
+    background: #2C1516;
+    border: 1px solid #553A3B;
+    border-radius: 8px;
+    height: 50px;
+    padding-left: 20px;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    color: #E2E8F0;
+    width: 540px;
+}
+.input_poster_3x4_update {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.input_poster_3x4_update input {
+    background: #2C1516;
+    border: 1px solid #553A3B;
+    border-radius: 8px;
+    height: 50px;
+    padding-left: 20px;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    color: #E2E8F0;
+    width: 540px;
+}
+.input_poster_url_update {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.input_poster_url_update div {
+    display: flex;
+    justify-content: space-between;
+}
+#poster_url_update {
+    background: #2C1516;
+    border: 1px solid #553A3B;
+    border-radius: 8px;
+    height: 50px;
+    padding-left: 20px;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    color: #E2E8F0;
+    width: 950px;
+}
+.up_picture_update {
+    background: #FFFFFF0D;
+    border: 1px solid #553A3B;
+    width: 135px;
+    height: 50px;
+    border-radius: 8px;
+    padding: 13px 16px;
+    color: #E2E8F0;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    cursor: pointer;
+}
+.input_trailer_and_coverage_update {
+    display: flex;
+    justify-content: space-between;
+}
+.input_trailer_update {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.input_trailer_update input {
+    background: #2C1516;
+    border: 1px solid #553A3B;
+    border-radius: 8px;
+    height: 50px;
+    color: #E2E8F0;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    width: 540px;
+}
+.input_converage_update {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.input_converage_update select {
+    background: #2C1516;
+    border: 1px solid #553A3B;
+    border-radius: 8px;
+    height: 50px;
+    color: #E2E8F0;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    width: 540px;
+    padding-left: 20px;
+}
+.input_description_update {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.description_film_update {
+    background: #2C1516;
+    border: 1px solid #553A3B;
+    border-radius: 8px;
+    height: 50px;
+    padding-left: 20px;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    color: #E2E8F0;
+    padding-top: 20px;
+    height: 100px;
+}
+.foot_task_update_film {
+    background: #FFFFFF0D;
+    border-top: 1px solid #553A3B;
+    height: 80px;
+    padding: 25px 24px;
+    position: relative;
+}
+.btn_cancel_and_commit_update {
+    position: absolute;
+    right: 50px;
+    display: flex;
+    gap: 15px;
+}
+.btn_cancel_update {
+    border: 1px solid #475569;
+    border-radius: 8px;
+    padding: 10px 24px;
+    cursor: pointer;
+}
+.btn_commit_update {
+    box-shadow: 0px 4px 6px -4px #E7081433;
+    box-shadow: 0px 10px 15px -3px #E7081433;
+    background: #FFFFFF01;
+    border-radius: 8px;
+    background: #E70814;
+    color: #FFFFFF;
+    padding: 10px 24px;
+    cursor: pointer;
+}
+.avatar_film {
+    width: 48px;
+    height: 64px;
+    border-radius: 4px;
 }

@@ -233,6 +233,192 @@
             </table>
         </div>
     </div>
+    <div class="overlay"></div>
+    <div class="add_new_film">
+        <div class="head_task_add_film">
+            <h1>Thêm Phim Mới</h1>
+            <p id="close_tab_add">X</p>
+        </div>
+        <div class="form_input_add">
+            <div class="input_name_film">
+                <label for="name_film">Tên phim <span class="obligatory">*</span></label>
+                <input type="text" name="Tên phim" id="name_film" placeholder="Nhập tên phim">
+            </div>
+            <div class="input_category_and_duration_film">
+                <div class="input_category_film">
+                    <label for="category_film">Thể loại <span class="obligatory">*</span></label>
+                    <select name="Thể loại" id="category_film">
+                        <option value="Chọn thể loại">Chọn thể loại</option>
+                        <option value="Hành động, Viễn tưởng">Hành động, Viễn tưởng</option>
+                        <option value="Hoạt hình, Hài">Hoạt hình, Hài</option>
+                        <option value="Tâm lý, Tình cảm">Tâm lý, Tình cảm</option>
+                        <option value="Kinh dị, Bí ẩn">Kinh dị, Bí ẩn</option>
+                        <option value="Lịch sử, Tài liệu">Lịch sử, Tài liệu</option>
+                        <option value="Thể thao, Võ thuật">Thể thao, Võ thuật</option>
+                        <option value="18+">18+</option>
+                    </select>
+                </div>
+                <div class="input_duration_film">
+                    <label for="duration_film">Thời lượng (phút) <span class="obligatory">*</span></label>
+                    <input type="number" name="Thời lượng" id="duration_film" placeholder="Ví dụ: 120">
+                </div>
+            </div>
+            <div class="input_premiere_and_status_film">
+                <div class="input_premiere_film">
+                    <label for="premiere_film">Ngày khởi chiếu <span class="obligatory">*</span></label>
+                    <input type="date" name="Ngày khởi chiếu" id="premiere_film">
+                </div>
+                <div class="input_status_film">
+                    <label for="status_film">Trạng thái <span class="obligatory">*</span></label>
+                    <select name="Trạng thái" id="status_film">
+                        <option value="Đang chiếu">Đang chiếu</option>
+                        <option value="Sắp chiếu">Sắp chiếu</option>
+                        <option value="Đã chiếu">Đã chiếu</option>
+                    </select>
+                </div>
+            </div>
+            <div class="input_price_ticket_and_poster3x4">
+                <div class="input_price">
+                    <label for="price">Giá vé <span class="obligatory">*</span></label>
+                    <input type="number" name="Giá vé" id="price" placeholder="Nhập giá vé ...">
+                </div>
+                <div class="input_poster_3x4">
+                    <label for="poster_3x4">URL Ảnh 3x4 <span class="obligatory">*</span></label>
+                    <input type="text" name="URL Ảnh 3x4" id="poster3x4" placeholder="https://example.com/poster.jpg">
+                </div>
+            </div>
+            <div class="input_poster_url">
+                <label for="poster_url">URL Ảnh bìa <span class="obligatory">*</span></label>
+                <div>
+                    <input type="text" name="URL Ảnh bìa" id="poster_url" placeholder="https://example.com/poster.jpg">
+                    <button class="up_picture">Tải ảnh</button>
+                </div>
+            </div>
+            <div class="input_trailer_and_coverage">
+                <div class="input_trailer">
+                    <label for="trailer_film">Trailer Phim <span class="obligatory">*</span></label>
+                    <input type="text" name="Trailer Phim" id="trailer_film"
+                        placeholder="https://www.youtube.com/embed/...">
+                </div>
+                <div class="input_converage">
+                    <label for="converage_film">Độ nổi bật <span class="obligatory">*</span></label>
+                    <select name="Độ nổi bật" id="converage_film">
+                        <option value="Độ nổi bật">Độ nổi bật</option>
+                        <option value="Hot">Hot</option>
+                        <option value="Normal">Normal</option>
+                        <option value="Not Popular">Not Popular</option>
+                    </select>
+                </div>
+            </div>
+            <div class="input_description">
+                <label for="description_film">Mô tả ngắn <span class="obligatory">*</span></label>
+                <textarea name="Mô tả ngắn" id="description_film"
+                    placeholder="Nhập tóm tắt nội dung phim..."></textarea>
+            </div>
+        </div>
+        <div class="foot_task_add_film">
+            <div class="btn_cancel_and_commit">
+                <button class="btn_cancel">Hủy</button>
+                <button class="btn_commit"><img src="../assets/icons/icon_add.png" alt=""> Thêm mới</button>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+    <div class="update_film">
+        <div class="head_task_update_film">
+            <h1>Cập Nhật Thông Tin Phim</h1>
+            <p id="close_tab_update">X</p>
+        </div>
+        <div class="form_input_update">
+            <div class="input_name_film_update">
+                <label for="name_film_update">Tên phim <span class="obligatory">*</span></label>
+                <input type="text" name="Tên phim" id="name_film_update" placeholder="Nhập tên phim" value="Dune: Hành Tinh Cát - Phần 2">
+            </div>
+            <div class="input_category_and_duration_film_update">
+                <div class="input_category_film_update">
+                    <label for="category_film_update">Thể loại <span class="obligatory">*</span></label>
+                    <select name="Thể loại" id="category_film_update">
+                        <option value="Hành động, Viễn tưởng">Hành động, Viễn tưởng</option>
+                        <option value="Chọn thể loại">Chọn thể loại</option>
+                        <option value="Hoạt hình, Hài">Hoạt hình, Hài</option>
+                        <option value="Tâm lý, Tình cảm">Tâm lý, Tình cảm</option>
+                        <option value="Kinh dị, Bí ẩn">Kinh dị, Bí ẩn</option>
+                        <option value="Lịch sử, Tài liệu">Lịch sử, Tài liệu</option>
+                        <option value="Thể thao, Võ thuật">Thể thao, Võ thuật</option>
+                        <option value="18+">18+</option>
+                    </select>
+                </div>
+                <div class="input_duration_film_update">
+                    <label for="duration_film_update">Thời lượng (phút) <span class="obligatory">*</span></label>
+                    <input type="number" name="Thời lượng" id="duration_film_update" placeholder="Ví dụ: 120" value="166">
+                </div>
+            </div>
+            <div class="input_premiere_and_status_film_update">
+                <div class="input_premiere_film">
+                    <label for="premiere_film_update">Ngày khởi chiếu <span class="obligatory">*</span></label>
+                    <input type="date" name="Ngày khởi chiếu" id="premiere_film_update" value="2024-03-01">
+                </div>
+                <div class="input_status_film_update">
+                    <label for="status_film_update">Trạng thái <span class="obligatory">*</span></label>
+                    <select name="Trạng thái" id="status_film_update">
+                        <option value="Đang chiếu">Đang chiếu</option>
+                        <option value="Sắp chiếu">Sắp chiếu</option>
+                        <option value="Đã chiếu">Đã chiếu</option>
+                    </select>
+                </div>
+            </div>
+            <div class="input_price_ticket_and_poster3x4_update">
+                <div class="input_price_update">
+                    <label for="price_update">Giá vé <span class="obligatory">*</span></label>
+                    <input type="number" name="Giá vé" id="price_update" placeholder="Nhập giá vé ..." value="90000">
+                </div>
+                <div class="input_poster_3x4_update">
+                    <label for="poster_3x4_update">URL Ảnh 3x4 <span class="obligatory">*</span></label>
+                    <input type="text" name="URL Ảnh 3x4" id="poster3x4_update" placeholder="https://example.com/poster.jpg" value="https://i.redd.it/5938pz4qcsic1.jpeg">
+                </div>
+            </div>
+            <div class="input_poster_url_update">
+                <label for="poster_url_update">URL Ảnh bìa <span class="obligatory">*</span></label>
+                <div>
+                    <input type="text" name="URL Ảnh bìa" id="poster_url_update" placeholder="https://example.com/poster.jpg" value="https://dunenewsnet.com/wp-content/uploads/2024/01/Dune-Part-Two-Movie-Posters-final-feature.jpg">
+                </div>
+            </div>
+            <div class="input_trailer_and_coverage_update">
+                <div class="input_trailer_update">
+                    <label for="trailer_film_update">Trailer Phim <span class="obligatory">*</span></label>
+                    <input type="text" name="Trailer Phim" id="trailer_film_update"
+                        placeholder="https://www.youtube.com/embed/..." value="https://www.youtube.com/embed/_YUzQa_1RCE">
+                </div>
+                <div class="input_converage_update">
+                    <label for="converage_film_update">Độ nổi bật <span class="obligatory">*</span></label>
+                    <select name="Độ nổi bật" id="converage_film_update">
+                        <option value="Hot">Hot</option>
+                        <option value="Độ nổi bật">Độ nổi bật</option>
+                        <option value="Normal">Normal</option>
+                        <option value="Not Popular">Not Popular</option>
+                    </select>
+                </div>
+            </div>
+            <div class="input_description_update">
+                <label for="description_film_update">Mô tả ngắn <span class="obligatory">*</span></label>
+                <textarea name="Mô tả ngắn" id="description_film_update"
+                    placeholder="Nhập tóm tắt nội dung phim...">Tiếp nối phần trước, Paul Atreides hợp nhất với Fremen để trả thù gia tộc Harkonnen và đối mặt với số phận của vũ trụ.</textarea>
+            </div>
+        </div>
+        <div class="foot_task_update_film">
+            <div class="btn_cancel_and_commit_update">
+                <button class="btn_cancel_update">Hủy</button>
+                <button class="btn_commit_update"><img src="../assets/icons/icon_commit_update.png" alt=""> Cập nhật</button>
+            </div>
+        </div>
+    </div>
+    <script src="../js/movie_management_page.js"></script>
 </body>
 
 </html>
