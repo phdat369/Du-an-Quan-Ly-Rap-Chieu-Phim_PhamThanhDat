@@ -21,7 +21,7 @@
         <div class="container_2">
             <div class="taskbar">
                 <a href="" class="link_pages">Trang Chủ</a>
-                <a href="" class="link_pages">Phim</a>
+                <a href="#body_page1" class="link_pages">Phim</a>
                 <a href="" class="link_pages">Rạp chiếu</a>
             </div>
         </div>
@@ -59,12 +59,18 @@
                 </div>
             </div>
         </div>
-        <div class="body_page1">
+        <div class="body_page1" id="body_page1">
             <div class="active_film">
                 <p>Phim Đang Chiếu</p>
                 <div class="see_all">
-                    <p>Xem tất cả</p>
-                    <img src="../assets/icons/icon_arow_red.png" alt="">
+                    <div class="show_all">
+                        <p>Xem tất cả</p>
+                        <img src="../assets/icons/icon_arow_red.png" alt="">
+                    </div>
+                    <div class="remove_show_all">
+                        <p>Thu lại</p>
+                        <img src="../assets/icons/icon_arrow_flipped.png" alt="">
+                    </div>
                 </div>
             </div>
             <div id="main_movie">
@@ -192,4 +198,5 @@
     </footer>
     <script src="../js/landing_page.js"></script>
 </body>
+
 </html>

@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <link rel="stylesheet" href="../css/movie_management_page.css">
+</head>
+
+<body>
+    <div class="left_page">
+        <div class="container_1">
+            <div class="logo_first">
+                <img src="../assets/icons/icon_movie_white.png" alt="" id="icon_movie">
+            </div>
+            <div class="name_web">
+                <span id="name_1">Rikkei </span>
+                <span id="name_2">Cinema</span>
+            </div>
+        </div>
+        <div class="taskbar">
+            <div class="management_film">
+                <img src="../assets/icons/icon_movie.png" alt="">
+                <p>Quản lý phim</p>
+            </div>
+            <div class="management_ticket">
+                <img src="../assets/icons/icon_ticket.png" alt="">
+                <p>Quản lý vé</p>
+            </div>
+        </div>
+        <div class="log_out">
+            <div class="account">
+                <img src="../assets/images/picture_avatar.png" alt="">
+                <div class="infor">
+                    <p id="nameUser">Admin Quản lý</p>
+                    <p id="emailUser">LQTuan@rikkei.edu.vn</p>
+                </div>
+                <img src="../assets/icons/icon_logout.png" alt="" id="img_logout">
+            </div>
+        </div>
+    </div>
+    <div class="right_page">
+        <div class="head">
+            <div class="title">
+                <h1>Quản lý danh sách phim</h1>
+                <p>Xem, chỉnh sửa và quản lý tất cả các phim có trên hệ thống.</p>
+            </div>
+            <div class="input_search_and_add">
+                <div class="search_film">
+                    <img src="../assets/icons/icon_search.png" alt="">
+                    <input type="text" id="search" placeholder="Tìm tên phim...">
+                </div>
+                <div class="add_film">
+                    <img src="../assets/icons/icon_add.png" alt="">
+                    <p>Thêm phim mới</p>
+                </div>
+            </div>
+        </div>
+        <div class="sort_film">
+            <p id="all_film">Tất cả (24)</p>
+            <p id="is_showing" class="btn_sort">Đang chiếu (8)</p>
+            <p id="coming_soon" class="btn_sort">Sắp chiếu (5)</p>
+            <p id="screened" class="btn_sort">Đã chiếu (11)</p>
+        </div>
+        <div class="display_film">
+            <table>
+                <thead>
+                    <tr>
+                        <th>ẢNH BÌA</th>
+                        <th>TÊN PHIM</th>
+                        <th class="head_category">THỂ LOẠI</th>
+                        <th>THỜI LƯỢNG</th>
+                        <th>NGÀY KHỞI CHIẾU</th>
+                        <th>TRẠNG THÁI</th>
+                        <th>THAO TÁC</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><img src="../assets/images/picture_10.png" alt=""></td>
+                        <td class="name_film">
+                            <p>Dune: Part Two</p>
+                            <p>Hành tinh cát: Phần hai</p>
+                        </td>
+                        <td class="category_film">
+                            <p>Hành động</p>
+                            <p>Viễn tưởng</p>
+                        </td>
+                        <td class="duration_film">
+                            <p>166 phút</p>
+                        </td>
+                        <td class="premiere_date_film">
+                            <p>01/03/2024</p>
+                        </td>
+                        <td class="status_film">
+                            <p class="status_is_showing">Đang chiếu</p>
+                        </td>
+                        <td class="operation_film">
+                            <div class="btn_fix">
+                                <p class="update"><img src="../assets/icons/icon_update.png" alt=""></p>
+                                <p class="delete"><img src="../assets/icons/icon_delete.png" alt=""></p>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><img src="../assets/images/picture_11.png" alt=""></td>
+                        <td class="name_film">
+                            <p>Kung Fu PanDa 4</p>
+                            <p>Gấu trúc Kung Fu 4</p>
+                        </td>
+                        <td class="category_film">
+                            <p>Hoạt hình</p>
+                            <p>Hài</p>
+                        </td>
+                        <td class="duration_film">
+                            <p>94 phút</p>
+                        </td>
+                        <td class="premiere_date_film">
+                            <p>08/03/2024</p>
+                        </td>
+                        <td class="status_film">
+                            <p class="status_is_showing">Đang chiếu</p>
+                        </td>
+                        <td class="operation_film">
+                            <div class="btn_fix">
+                                <p class="update"><img src="../assets/icons/icon_update.png" alt=""></p>
+                                <p class="delete"><img src="../assets/icons/icon_delete.png" alt=""></p>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><img src="../assets/images/picture_12.png" alt=""></td>
+                        <td class="name_film">
+                            <p>Godzilla x Kong: The New Empire</p>
+                            <p>Đế chế mới</p>
+                        </td>
+                        <td class="category_film">
+                            <p>Hành động</p>
+                            <p>Viễn tưởng</p>
+                        </td>
+                        <td class="duration_film">
+                            <p>115 phút</p>
+                        </td>
+                        <td class="premiere_date_film">
+                            <p>29/03/2024</p>
+                        </td>
+                        <td class="status_film">
+                            <p class="status_comming_soon">Sắp chiếu</p>
+                        </td>
+                        <td class="operation_film">
+                            <div class="btn_fix">
+                                <p class="update"><img src="../assets/icons/icon_update.png" alt=""></p>
+                                <p class="delete"><img src="../assets/icons/icon_delete.png" alt=""></p>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><img src="../assets/images/picture_13.png" alt=""></td>
+                        <td class="name_film">
+                            <p>Mai</p>
+                            <p>Mai</p>
+                        </td>
+                        <td class="category_film">
+                            <p>Tâm lý</p>
+                            <p>Tình cảm</p>
+                        </td>
+                        <td class="duration_film">
+                            <p>131 phút</p>
+                        </td>
+                        <td class="premiere_date_film">
+                            <p>10/02/2024</p>
+                        </td>
+                        <td class="status_film">
+                            <p class="status_screened">Đã chiếu</p>
+                        </td>
+                        <td class="operation_film">
+                            <div class="btn_fix">
+                                <p class="update"><img src="../assets/icons/icon_update.png" alt=""></p>
+                                <p class="delete"><img src="../assets/icons/icon_delete.png" alt=""></p>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><img src="../assets/images/picture_14.png" alt=""></td>
+                        <td class="name_film">
+                            <p>Exhuma</p>
+                            <p>Quật Mộ Trùng Ma</p>
+                        </td>
+                        <td class="category_film">
+                            <p>Kinh dị</p>
+                            <p>Bí ẩn</p>
+                        </td>
+                        <td class="duration_film">
+                            <p>134 phút</p>
+                        </td>
+                        <td class="premiere_date_film">
+                            <p>15/03/2024</p>
+                        </td>
+                        <td class="status_film">
+                            <p class="status_is_showing">Đang chiếu</p>
+                        </td>
+                        <td class="operation_film">
+                            <div class="btn_fix">
+                                <p class="update"><img src="../assets/icons/icon_update.png" alt=""></p>
+                                <p class="delete"><img src="../assets/icons/icon_delete.png" alt=""></p>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="7">
+                            <div class="pages_number">
+                                <p class="footer_display">Hiển thị <span class="pages">1-5</span> trên <span
+                                        class="quantity_film">24</span> phim</p>
+                                <div class="btn_skip_pages">
+                                    <button class="btn_change_page"><img src="../assets/icons/icon_prev.png"
+                                            alt=""></button>
+                                    <button class="btn_change_page">1</button>
+                                    <button class="btn_change_page">2</button>
+                                    <button class="btn_change_page">3</button>
+                                    <button class="btn_change_page">...</button>
+                                    <button class="btn_change_page">5</button>
+                                    <button class="btn_change_page"><img src="../assets/icons/icon_next.png"
+                                            alt=""></button>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+    </div>
+</body>
+
+</html>

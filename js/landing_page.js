@@ -100,7 +100,7 @@ const renderFilmHot = () => {
             <div class="note">
                 <div class="status">
                     <img src="../assets/icons/icon_record.png" alt="">
-                    <p>Phim Hot</p>
+                    <p>Phim Nổi Bật</p>
                 </div>
                 <div class="countdown">
                     <p>Bắt đầu sau: ${Math.ceil((datePremiere - dateNow) / (1000 * 60 * 60 * 24))} ngày</p>
@@ -143,8 +143,14 @@ const renderFilmShowing = () => {
         <div class="active_film">
             <p>Phim Đang Chiếu</p>
             <div class="see_all">
-                <p>Xem tất cả</p>
-                <img src="../assets/icons/icon_arow_red.png" alt="">
+                <div class="show_all">
+                        <p>Xem tất cả</p>
+                        <img src="../assets/icons/icon_arow_red.png" alt="">
+                    </div>
+                    <div class="remove_show_all">
+                        <p>Thu lại</p>
+                        <img src="../assets/icons/icon_arrow_flipped.png" alt="">
+                    </div>
             </div>
         </div>
         <button class="btn" id="prev">❮</button>
@@ -192,7 +198,7 @@ const videoTrailer = (id) => {
             divVideo.innerHTML = `
             <div class="video_content">
             <span class="close">X</span>
-            <iframe src="${element.videoTrailer}" frameborder="0"  allow="autoplay" allowfullscreen></iframe>
+            <iframe src="${element.videoTrailer}" frameborder="0"   allowfullscreen></iframe>
             </div>
             `
             firstPage.appendChild(divVideo);
@@ -203,3 +209,19 @@ const videoTrailer = (id) => {
         }
     });
 }
+let showAll = document.getElementsByClassName("show_all")[0];
+let removeShowAll = document.getElementsByClassName("remove_show_all")[0];
+showAll.addEventListener("click" , () => {
+    mainMovie.style.flexWrap = "wrap";
+    showAll.style.display = "none";
+    removeShowAll.style.display = "inline";
+    btnNext.style.display = "none";
+    btnPrev.style.display = "none";
+});
+removeShowAll.addEventListener("click" , () => {
+    mainMovie.style.flexWrap = "nowrap";
+    showAll.style.display = "inline";
+    removeShowAll.style.display = "none";
+    btnNext.style.display = "inline";
+    btnPrev.style.display = "inline";
+});
