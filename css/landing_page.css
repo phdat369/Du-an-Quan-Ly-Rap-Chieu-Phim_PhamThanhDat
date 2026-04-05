@@ -673,3 +673,6 @@ iframe {
     gap: 10px;
     display: none;
 }
+html {
+    scroll-behavior: smooth;
+}
