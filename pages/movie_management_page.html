@@ -60,7 +60,7 @@
         </div>
         <div class="body_page">
             <div class="sort_film">
-                <p id="all_film" class="btn_sort">Tất cả (24)</p>
+                <p id="all_film" class="btn_sort sort_choose">Tất cả (24)</p>
                 <p id="is_showing" class="btn_sort">Đang chiếu (8)</p>
                 <p id="coming_soon" class="btn_sort">Sắp chiếu (5)</p>
                 <p id="screened" class="btn_sort">Đã chiếu (11)</p>
@@ -217,14 +217,10 @@
                                     <p class="footer_display">Hiển thị <span class="pages">1-5</span> trên <span
                                             class="quantity_film">24</span> phim</p>
                                     <div class="btn_skip_pages">
-                                        <button class="btn_change_page"><img src="../assets/icons/icon_prev.png"
+                                        <button class="btn_change_page" id="btn_prev_page"><img src="../assets/icons/icon_prev.png"
                                                 alt=""></button>
                                         <button class="btn_change_page inPageChoose">1</button>
-                                        <button class="btn_change_page">2</button>
-                                        <button class="btn_change_page">3</button>
-                                        <button class="btn_change_page">...</button>
-                                        <button class="btn_change_page">5</button>
-                                        <button class="btn_change_page"><img src="../assets/icons/icon_next.png"
+                                        <button class="btn_change_page" id="btn_next_page"><img src="../assets/icons/icon_next.png"
                                                 alt=""></button>
                                     </div>
                                 </div>
@@ -250,6 +246,7 @@
                 <div class="input_name_film">
                     <label for="name_film">Tên phim <span class="obligatory">*</span></label>
                     <input type="text" name="Tên phim" id="name_film" placeholder="Nhập tên phim">
+                    <p id="notificationNameFimlAddError" class="validateFormUpdate"></p>
                 </div>
                 <div class="input_category_and_duration_film">
                     <div class="input_category_film">
@@ -264,16 +261,19 @@
                             <option value="Thể thao, Võ thuật">Thể thao, Võ thuật</option>
                             <option value="18+">18+, Người lớn</option>
                         </select>
+                        <p id="notificationCategoryFimlAddError" class="validateFormUpdate"></p>
                     </div>
                     <div class="input_duration_film">
                         <label for="duration_film">Thời lượng (phút) <span class="obligatory">*</span></label>
                         <input type="number" name="Thời lượng" id="duration_film" placeholder="Ví dụ: 120">
+                        <p id="notificationDurationFimlAddError" class="validateFormUpdate"></p>
                     </div>
                 </div>
                 <div class="input_premiere_and_status_film">
                     <div class="input_premiere_film">
                         <label for="premiere_film">Ngày khởi chiếu <span class="obligatory">*</span></label>
                         <input type="date" name="Ngày khởi chiếu" id="premiere_film">
+                        <p id="notificationPremiereFimlAddError" class="validateFormUpdate"></p>
                     </div>
                     <div class="input_status_film">
                         <label for="status_film">Trạng thái <span class="obligatory">*</span></label>
@@ -282,17 +282,20 @@
                             <option value="Sắp chiếu">Sắp chiếu</option>
                             <option value="Đã chiếu">Đã chiếu</option>
                         </select>
+                        <p id="notificationStatusFimlAddError" class="validateFormUpdate"></p>
                     </div>
                 </div>
                 <div class="input_price_ticket_and_poster3x4">
                     <div class="input_price">
                         <label for="price">Giá vé <span class="obligatory">*</span></label>
                         <input type="number" name="Giá vé" id="price" placeholder="Nhập giá vé ...">
+                        <p id="notificationPriceFimlAddError" class="validateFormUpdate"></p>
                     </div>
                     <div class="input_poster_3x4">
                         <label for="poster_3x4">URL Ảnh 3x4 <span class="obligatory">*</span></label>
                         <input type="text" name="URL Ảnh 3x4" id="poster3x4"
                             placeholder="https://example.com/poster.jpg">
+                        <p id="notificationPoster3x4FimlAddError" class="validateFormUpdate"></p>
                     </div>
                 </div>
                 <div class="input_poster_url">
@@ -301,6 +304,7 @@
                         <input type="text" name="URL Ảnh bìa" id="poster_url"
                             placeholder="https://example.com/poster.jpg">
                         <button class="up_picture">Tải ảnh</button>
+                        <p id="notificationPosterURLFimlAddError" class="validateFormUpdate"></p>
                     </div>
                 </div>
                 <div class="input_trailer_and_coverage">
@@ -308,6 +312,7 @@
                         <label for="trailer_film">Trailer Phim <span class="obligatory">*</span></label>
                         <input type="text" name="Trailer Phim" id="trailer_film"
                             placeholder="https://www.youtube.com/embed/...">
+                        <p id="notificationTrailerFimlAddError" class="validateFormUpdate"></p>
                     </div>
                     <div class="input_converage">
                         <label for="converage_film">Độ nổi bật <span class="obligatory">*</span></label>
@@ -317,12 +322,14 @@
                             <option value="Normal">Normal</option>
                             <option value="Not Popular">Not Popular</option>
                         </select>
+                        <p id="notificationConverageFimlAddError" class="validateFormUpdate"></p>
                     </div>
                 </div>
                 <div class="input_description">
                     <label for="description_film">Mô tả ngắn <span class="obligatory">*</span></label>
                     <textarea name="Mô tả ngắn" id="description_film"
                         placeholder="Nhập tóm tắt nội dung phim..."></textarea>
+                        <p id="notificationDescriptionFimlAddError" class="validateFormUpdate"></p>
                 </div>
             </div>
             <div class="foot_task_add_film">
@@ -454,6 +461,7 @@
             </div>
         </div>
     </div>
+    <div id="toast"></div>
     <script src="../js/movie_management_page.js"></script>
 </body>
 </html>

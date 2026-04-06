@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <link rel="stylesheet" href="../css/ticket_management_page.css">
+</head>
+
+<body>
+    <div class="left_page">
+        <div class="container_1">
+            <div class="logo_first">
+                <img src="../assets/icons/icon_movie_white.png" alt="" id="icon_movie">
+            </div>
+            <div class="name_web">
+                <span id="name_1">Rikkei </span>
+                <span id="name_2">Cinema</span>
+            </div>
+        </div>
+        <div class="taskbar">
+            <div class="management_film">
+                <img src="../assets/icons/icon_movie.png" alt="">
+                <p>Quản lý phim</p>
+            </div>
+            <div class="management_ticket">
+                <img src="../assets/icons/icon_ticket.png" alt="">
+                <p>Quản lý vé</p>
+            </div>
+        </div>
+        <div class="log_out">
+            <div class="account">
+                <img src="../assets/images/picture_avatar.png" alt="">
+                <div class="infor">
+                    <p id="nameUser">Admin Quản lý</p>
+                    <p id="emailUser">LQTuan@rikkei.edu.vn</p>
+                </div>
+                <img src="../assets/icons/icon_logout.png" alt="" id="img_logout">
+            </div>
+        </div>
+    </div>
+    <div class="right_page">
+        <div class="head">
+            <h1>Quản lí vé đã đặt</h1>
+            <div class="search_ticket">
+                <img src="../assets/icons/icon_search.png" alt="" id="icon_search">
+                <input type="text" id="search_ticket" placeholder="Tìm kiếm mã vé, tên khách...">
+                <img src="../assets/icons/icon_notification.png" alt="">
+            </div>
+        </div>
+        <div class="body_page">
+            <div class="statistical">
+                <div class="task">
+                    <p class="name_task" id="totalTicketToday">Tổng vé hôm nay</p>
+                    <p class="index_task" id="quantity_ticket_today">152</p>
+                    <p class="note" id="quantity_ticket_compared_to_yesterday">+12% so với hôm qua</p>
+                </div>
+                <div class="task">
+                    <p class="name_task" id="totalRevenueToday">Doanh thu ngày</p>
+                    <p class="index_task" id="quantity_revenue_today">12.5tr</p>
+                    <p class="note" id="revenue_compared_to_yesterday">+5% so với mục tiêu</p>
+                </div>
+                <div class="task">
+                    <p class="name_task" id="ticket_wait">Vé chờ xác nhận</p>
+                    <p class="index_task" id="quantity_ticket_wait">5</p>
+                    <p class="note" id="warning_wait"><img src="../assets/icons/icon_warning_yellow.png" alt=""> Cần xử
+                        lý ngay</p>
+                </div>
+            </div>
+            <button class="book_ticket"><img src="../assets/icons/icon_add.png" alt="">Đặt vé</button>
+            <div class="display_ticket">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>MÃ VÉ</th>
+                            <th>KHÁCH HÀNG</th>
+                            <th>PHIM</th>
+                            <th>SUẤT CHIẾU</th>
+                            <th>GHẾ</th>
+                            <th>TỔNG TIỀN</th>
+                            <th>TRẠNG THÁI</th>
+                            <th>THAO TÁC</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="code_ticket">
+                                <p>#VE-1001</p>
+                            </td>
+                            <td class="client">
+                                <div class="name_user_book_film">Nguyễn Văn A</div>
+                            </td>
+                            <td class="name_film_book">
+                                <p>Dune: Part Two</p>
+                            </td>
+                            <td>
+                                <div class="clock_book_film">10:00</div>
+                                <div class="date_book_film">15/10/2023</div>
+                            </td>
+                            <td class="seat_book">
+                                <div>
+                                    <p>F12, F13</p>
+                                </div>
+                            </td>
+                            <td class="total_price_books">
+                                <p>180.000đ</p>
+                            </td>
+                            <td class="status_book">
+                                <div class="paid">
+                                    <p>Đã thanh toán</p>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="btn_fix">
+                                    <p class="update"><img src="../assets/icons/icon_update.png" alt=""></p>
+                                    <p class="delete"><img src="../assets/icons/icon_delete.png" alt=""></p>
+                                </div>
+                            </td>
+                        </tr>
+
+
+                        <tr>
+                            <td class="code_ticket">
+                                <p>#VE-1002</p>
+                            </td>
+                            <td>
+                                <div class="name_user_book_film">Trần Thị B</div>
+                            </td>
+                            <td class="name_film_book">
+                                <p>Mai</p>
+                            </td>
+                            <td>
+                                <div class="clock_book_film">13:30</div>
+                                <div class="date_book_film">15/10/2023</div>
+                            </td>
+                            <td class="seat_book">
+                                <div>
+                                    <p>G5</p>
+                                </div>
+                            </td>
+                            <td class="total_price_books">
+                                <p>90.000đ</p>
+                            </td>
+                            <td class="status_book">
+                                <div class="awaiting_processing">
+                                    <p>Chờ xử lý</p>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="btn_fix">
+                                    <p class="update"><img src="../assets/icons/icon_update.png" alt=""></p>
+                                    <p class="delete"><img src="../assets/icons/icon_delete.png" alt=""></p>
+                                </div>
+                            </td>
+                        </tr>
+
+
+                        <tr>
+                            <td class="code_ticket">
+                                <p>#VE-1003</p>
+                            </td>
+                            <td>
+                                <div class="name_user_book_film">Lê Văn C</div>
+                            </td>
+                            <td class="name_film_book">
+                                <p>Kung Fu Panda 4</p>
+                            </td>
+                            <td>
+                                <div class="clock_book_film">19:00</div>
+                                <div class="date_book_film">15/10/2023</div>
+                            </td>
+                            <td class="seat_book">
+                                <div>
+                                    <p>H10, H11, H12</p>
+                                </div>
+                            </td>
+                            <td class="total_price_books">
+                                <p>270.000đ</p>
+                            </td>
+                            <td class="status_book">
+                                <div class="paid">
+                                    <p>Đã thanh toán</p>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="btn_fix">
+                                    <p class="update"><img src="../assets/icons/icon_update.png" alt=""></p>
+                                    <p class="delete"><img src="../assets/icons/icon_delete.png" alt=""></p>
+                                </div>
+                            </td>
+                        </tr>
+
+
+                        <tr>
+                            <td class="code_ticket">
+                                <p>#VE-1004</p>
+                            </td>
+                            <td>
+                                <div class="name_user_book_film">Phạm Minh D</div>
+                            </td>
+                            <td class="name_film_book">
+                                <p>Exhuma: Quật Mộ</p>
+                            </td>
+                            <td>
+                                <div class="clock_book_film">21:45</div>
+                                <div class="date_book_film">14/10/2023</div>
+                            </td>
+                            <td class="seat_book">
+                                <div>
+                                    <p>E8</p>
+                                </div>
+                            </td>
+                            <td class="total_price_books">
+                                <p>90.000đ</p>
+                            </td>
+                            <td class="status_book">
+                                <div class="canceled">
+                                    <p>Đã hủy</p>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="btn_fix">
+                                    <p class="update"><img src="../assets/icons/icon_update.png" alt=""></p>
+                                    <p class="delete"><img src="../assets/icons/icon_delete.png" alt=""></p>
+                                </div>
+                            </td>
+                        </tr>
+
+
+                        <tr>
+                            <td class="code_ticket">
+                                <p>#VE-1005</p>
+                            </td>
+                            <td>
+                                <div class="name_user_book_film">Hoàng Yến E</div>
+                            </td>
+                            <td class="name_film_book">
+                                <p>Godzilla x Kong</p>
+                            </td>
+                            <td>
+                                <div class="clock_book_film">09:15</div>
+                                <div class="date_book_film">16/10/2023</div>
+                            </td>
+                            <td class="seat_book">
+                                <div>
+                                    <p>D4, D5</p>
+                                </div>
+                            </td>
+                            <td class="total_price_books">
+                                <p>180.000đ</p>
+                            </td>
+                            <td class="status_book">
+                                <div class="awaiting_processing">
+                                    <p>Chờ xử lý</p>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="btn_fix">
+                                    <p class="update"><img src="../assets/icons/icon_update.png" alt=""></p>
+                                    <p class="delete"><img src="../assets/icons/icon_delete.png" alt=""></p>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td colspan="8">
+                                <div class="footer_table">
+                                    <div class="pages_number">
+                                        <p class="footer_display">Đang xem <span class="start_page">1</span> đến <span
+                                                class="end_page">5</span> trong số <span
+                                                class="totalTicketAll">152</span>
+                                            kết quả</p>
+                                    </div>
+
+                                    <div class="btn_skip_pages">
+                                        <button class="btn_change_page" id="btn_prev_page"><img
+                                                src="../assets/icons/icon_prev.png" alt=""></button>
+                                        <button class="btn_change_page inPageChoose">1</button>
+                                        <button class="btn_change_page" id="btn_next_page"><img
+                                                src="../assets/icons/icon_next.png" alt=""></button>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+    <div class="overlay"></div>
+    <div class="update_book_ticket">
+        <div class="head_page_update">
+            <div>
+                <h1>Thêm Mới Đặt Vé</h1>
+                <p>Mã vé: <span>#TK-88293</span></p>
+            </div>
+            <p class="close_tab_update">X</p>
+        </div>
+        <div class="body_task_update_ticket">
+            <div class="input_client_update">
+                <label for="choose_client_update">Khách hàng</label>
+                <select name="Khách hàng" id="choose_client_update">
+                    <option value="Nguyễn Văn A">Nguyễn Văn A</option>
+                </select>
+            </div>
+            <div class="input_choose_film_and_choose_screeningrate_update">
+                <div class="input_choose_film_upadate">
+                    <label for="choose_film_update">Phim</label>
+                    <select name="Phim" id="choose_film_update">
+                        <option value="Dune: Hành Tinh Cát">Dune: Hành Tinh Cát</option>
+                    </select>
+                </div>
+                <div class="input_choose_screeningrate_update">
+                    <label for="choose_screeningrate_update">Suất chiếu</label>
+                    <select name="Suất chiếu" id="choose_screeningrate_update">
+                        <option value="25/10/2024 - 19:30">25/10/2024 - 19:30</option>
+                    </select>
+                </div>
+            </div>
+            <div class="input_choose_seat_and_choose_status_update">
+                <div class="input_choose_seat_update">
+                    <label for="choose_seat_update">Vị trí ghế</label>
+                    <input type="text" name="Chọn ghế" id="choose_seat_update" value="H12, H13">
+                </div>
+                <div class="input_choose_status_update">
+                    <label for="choose_status_update">Trạng thái thanh toán</label>
+                    <select name="Trạng thái thanh toán" id="choose_status_update">
+                        <option value="Đã thanh toán">Đã thanh toán</option>
+                        <option value="Đợi xử lý">Đợi xử lý</option>
+                        <option value="Đã hủy">Đã hủy</option>
+                    </select>
+                </div>
+            </div>
+            <div class="note_admin">
+                <label for="note">Ghi chú</label>
+                <textarea name="Ghi chú" id="note" placeholder="Nhập ghi chú của admin..."></textarea>
+            </div>
+            <div class="display_total_seat">
+                <div class="total_seat">
+                    <p>Tổng số ghế: 2</p>
+                </div>
+                <div class="price_for_seat">
+                    <p class="price_pay">Tổng số tiền thanh toán</p>
+                    <p class="total_price_seat">240.000 đ</p>
+                </div>
+            </div>
+        </div>
+        <div class="foot_task_update_ticket">
+            <div class="btn_cancel_and_commit_update">
+                <button class="btn_cancel_update">Hủy</button>
+                <button class="btn_commit_update"><img src="../assets/icons/icon_tick.png" alt=""> Xác nhận đặt vé</button>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="add_book_ticket">
+        <div class="head_page">
+            <h1>Thêm Mới Đặt Vé</h1>
+            <p>X</p>
+        </div>
+        <div class="body_task_add_ticket">
+            <div class="input_client">
+                <label for="choose_client">Chọn khách hàng</label>
+                <select name="Chọn khách hàng" id="choose_client">
+                    <option value="Tìm kiếm tên...">Tìm kiếm tên...</option>
+                </select>
+            </div>
+            <div class="input_choose_film_and_choose_screeningrate">
+                <div class="input_choose_film">
+                    <label for="choose_film">Chọn phim</label>
+                    <select name="Chọn phim" id="choose_film">
+                        <option value="Chọn phim đang chiếu...">Chọn phim đang chiếu...</option>
+                    </select>
+                </div>
+                <div class="input_choose_screeningrate">
+                    <label for="choose_screeningrate">Chọn suất chiếu</label>
+                    <select name="Chọn suất chiếu" id="choose_screeningrate">
+                        <option value="Chọn Suất">Chọn Suất</option>
+                    </select>
+                </div>
+            </div>
+            <div class="input_choose_seat">
+                <label for="choose_seat">Chọn ghế</label>
+                <input type="text" name="Chọn ghế" id="choose_seat">
+                <p>Phân cách các ghế bằng dấu phẩy</p>
+            </div>
+            <div class="input_choose_paymentmethod_and_choose_status">
+                <div class="input_choose_paymentmethod">
+                    <label for="choose_paymentmethod">Phương thức thanh toán</label>
+                    <select name="Phương thức thanh toán" id="choose_paymentmethod">
+                        <option value="Tiền mặt">Tiền mặt</option>
+                        <option value="Chuyển khoản">Chuyển khoản</option>
+                        <option value="Thẻ ngân hàng">Thẻ ngân hàng</option>
+                        <option value="Khác">Khác</option>
+                    </select>
+                </div>
+                <div class="input_choose_status">
+                    <label for="choose_status">Trạng thái thanh toán</label>
+                    <select name="Trạng thái thanh toán" id="choose_status">
+                        <option value="Đã thanh toán">Đã thanh toán</option>
+                        <option value="Đợi xử lý">Đợi xử lý</option>
+                        <option value="Đã hủy">Đã hủy</option>
+                    </select>
+                </div>
+            </div>
+            <div class="display_total_price">
+                <div class="total_price">
+                    <div class="picture_bill">
+                        <img src="../assets/icons/icon_bill.png" alt="">
+                    </div>
+                    <div class="bill">
+                        <h2>TỔNG TIỀN DỰ KIẾN</h2>
+                        <p class="price_bill">240.000 đ</p>
+                    </div>
+                </div>
+                <div class="infor_bill">
+                    <p><span class="quantity_ticket_buy">2</span> vé x <span class="price_film">120.000</span> đ</p>
+                    <p>Đã bao gồm VAT</p>
+                </div>
+            </div>
+        </div>
+        <div class="foot_task_add_ticket">
+            <div class="btn_cancel_and_commit">
+                <button class="btn_cancel">Hủy</button>
+                <button class="btn_commit"><img src="../assets/icons/icon_tick.png" alt=""> Xác nhận đặt vé</button>
+            </div>
+        </div>
+    </div>
+    <script src="../js/ticket_management_page.js"></script>
+</body>
+
+</html>
