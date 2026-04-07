@@ -301,7 +301,7 @@
         <div class="head_page_update">
             <div>
                 <h1>Thêm Mới Đặt Vé</h1>
-                <p>Mã vé: <span>#TK-88293</span></p>
+                <p>Mã vé: <span class="code_ticket_update">#TK-88293</span></p>
             </div>
             <p class="close_tab_update">X</p>
         </div>
@@ -334,8 +334,8 @@
                 <div class="input_choose_status_update">
                     <label for="choose_status_update">Trạng thái thanh toán</label>
                     <select name="Trạng thái thanh toán" id="choose_status_update">
-                        <option value="Đã thanh toán">Đã thanh toán</option>
-                        <option value="Đợi xử lý">Đợi xử lý</option>
+                        <option value="Đã Thanh Toán">Đã Thanh Toán</option>
+                        <option value="Chờ xử lý">Chờ xử lý</option>
                         <option value="Đã hủy">Đã hủy</option>
                     </select>
                 </div>
@@ -357,7 +357,7 @@
         <div class="foot_task_update_ticket">
             <div class="btn_cancel_and_commit_update">
                 <button class="btn_cancel_update">Hủy</button>
-                <button class="btn_commit_update"><img src="../assets/icons/icon_tick.png" alt=""> Xác nhận đặt vé</button>
+                <button class="btn_commit_update"><img src="../assets/icons/icon_tick.png" alt=""> Lưu thay đổi</button>
             </div>
         </div>
     </div>
@@ -367,7 +367,7 @@
     <div class="add_book_ticket">
         <div class="head_page">
             <h1>Thêm Mới Đặt Vé</h1>
-            <p>X</p>
+            <p class="close_tab_book_ticket">X</p>
         </div>
         <div class="body_task_add_ticket">
             <div class="input_client">
@@ -387,6 +387,11 @@
                     <label for="choose_screeningrate">Chọn suất chiếu</label>
                     <select name="Chọn suất chiếu" id="choose_screeningrate">
                         <option value="Chọn Suất">Chọn Suất</option>
+                        <option value="8:00">8:00</option>
+                        <option value="10:00">10:00</option>
+                        <option value="12:00">12:00</option>
+                        <option value="18:00">18:00</option>
+                        <option value="20:00">20:00</option>
                     </select>
                 </div>
             </div>
@@ -402,14 +407,15 @@
                         <option value="Tiền mặt">Tiền mặt</option>
                         <option value="Chuyển khoản">Chuyển khoản</option>
                         <option value="Thẻ ngân hàng">Thẻ ngân hàng</option>
+                        <option value="Ví điện tử">Ví điện tử</option>
                         <option value="Khác">Khác</option>
                     </select>
                 </div>
                 <div class="input_choose_status">
                     <label for="choose_status">Trạng thái thanh toán</label>
                     <select name="Trạng thái thanh toán" id="choose_status">
-                        <option value="Đã thanh toán">Đã thanh toán</option>
-                        <option value="Đợi xử lý">Đợi xử lý</option>
+                        <option value="Đã Thanh Toán">Đã Thanh Toán</option>
+                        <option value="Chờ xử lý">Chờ xử lý</option>
                         <option value="Đã hủy">Đã hủy</option>
                     </select>
                 </div>
@@ -421,11 +427,11 @@
                     </div>
                     <div class="bill">
                         <h2>TỔNG TIỀN DỰ KIẾN</h2>
-                        <p class="price_bill">240.000 đ</p>
+                        <p class="price_bill">0 đ</p>
                     </div>
                 </div>
                 <div class="infor_bill">
-                    <p><span class="quantity_ticket_buy">2</span> vé x <span class="price_film">120.000</span> đ</p>
+                    <p><span class="quantity_ticket_buy">0</span> vé x <span class="price_film">0</span> đ</p>
                     <p>Đã bao gồm VAT</p>
                 </div>
             </div>
@@ -437,7 +443,26 @@
             </div>
         </div>
     </div>
+
+    <div class="delete_ticket">
+        <div class="head_task_delete">
+            <div class="icon_warning">
+                <img src="../assets/icons/icon_delete_film.png" alt="">
+            </div>
+            <h1>Xác nhận hủy vé</h1>
+            <p>Bạn có chắc chắn muốn hủy và xóa vé mã này không?</p>
+        </div>
+        <div class="foot_task_delete">
+            <div class="btn_in_task_delete">
+                <button class="btn_cancel_delete">Hủy</button>
+                <button class="btn_commit_delete">Xóa ngay</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="toast"></div>
     <script src="../js/ticket_management_page.js"></script>
+
 </body>
 
 </html>

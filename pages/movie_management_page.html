@@ -272,7 +272,7 @@
                 <div class="input_premiere_and_status_film">
                     <div class="input_premiere_film">
                         <label for="premiere_film">Ngày khởi chiếu <span class="obligatory">*</span></label>
-                        <input type="date" name="Ngày khởi chiếu" id="premiere_film">
+                        <input type="text" name="Ngày khởi chiếu" id="premiere_film" placeholder="dd/mm/yyyy">
                         <p id="notificationPremiereFimlAddError" class="validateFormUpdate"></p>
                     </div>
                     <div class="input_status_film">
@@ -356,6 +356,7 @@
                     <label for="name_film_update">Tên phim <span class="obligatory">*</span></label>
                     <input type="text" name="Tên phim" id="name_film_update" placeholder="Nhập tên phim"
                         value="Dune: Hành Tinh Cát - Phần 2">
+                        <p id="notificationNameFimlUpdateError" class="validateUpdate"></p>
                 </div>
                 <div class="input_category_and_duration_film_update">
                     <div class="input_category_film_update">
@@ -370,17 +371,20 @@
                             <option value="Thể thao, Võ thuật">Thể thao, Võ thuật</option>
                             <option value="18+">18+</option>
                         </select>
+                        <p id="notificationCategoryFimlUpdateError" class="validateUpdate"></p>
                     </div>
                     <div class="input_duration_film_update">
                         <label for="duration_film_update">Thời lượng (phút) <span class="obligatory">*</span></label>
                         <input type="number" name="Thời lượng" id="duration_film_update" placeholder="Ví dụ: 120"
                             value="166">
+                        <p id="notificationDurationFimlUpdateError" class="validateUpdate"></p>
                     </div>
                 </div>
                 <div class="input_premiere_and_status_film_update">
                     <div class="input_premiere_film">
                         <label for="premiere_film_update">Ngày khởi chiếu <span class="obligatory">*</span></label>
-                        <input type="date" name="Ngày khởi chiếu" id="premiere_film_update" value="2024-03-01">
+                        <input type="text" name="Ngày khởi chiếu" id="premiere_film_update" value="01/03/2024" placeholder="dd/mm/yyyy">
+                        <p id="notificationPremiereFimlUpdateError" class="validateUpdate"></p>
                     </div>
                     <div class="input_status_film_update">
                         <label for="status_film_update">Trạng thái <span class="obligatory">*</span></label>
@@ -389,6 +393,7 @@
                             <option value="Sắp chiếu">Sắp chiếu</option>
                             <option value="Đã chiếu">Đã chiếu</option>
                         </select>
+                        <p id="notificationStatusFimlUpdateError" class="validateUpdate"></p>
                     </div>
                 </div>
                 <div class="input_price_ticket_and_poster3x4_update">
@@ -396,11 +401,13 @@
                         <label for="price_update">Giá vé <span class="obligatory">*</span></label>
                         <input type="number" name="Giá vé" id="price_update" placeholder="Nhập giá vé ..."
                             value="90000">
+                        <p id="notificationPriceFimlUpdateError" class="validateUpdate"></p>
                     </div>
                     <div class="input_poster_3x4_update">
                         <label for="poster_3x4_update">URL Ảnh 3x4 <span class="obligatory">*</span></label>
                         <input type="text" name="URL Ảnh 3x4" id="poster3x4_update"
                             placeholder="https://example.com/poster.jpg" value="https://i.redd.it/5938pz4qcsic1.jpeg">
+                        <p id="notificationPoster3x4FimlUpdateError" class="validateUpdate"></p>
                     </div>
                 </div>
                 <div class="input_poster_url_update">
@@ -409,6 +416,7 @@
                         <input type="text" name="URL Ảnh bìa" id="poster_url_update"
                             placeholder="https://example.com/poster.jpg"
                             value="https://dunenewsnet.com/wp-content/uploads/2024/01/Dune-Part-Two-Movie-Posters-final-feature.jpg">
+                        <p id="notificationPosterURLFimlUpdateError" class="validateUpdate"></p>
                     </div>
                 </div>
                 <div class="input_trailer_and_coverage_update">
@@ -417,6 +425,7 @@
                         <input type="text" name="Trailer Phim" id="trailer_film_update"
                             placeholder="https://www.youtube.com/embed/..."
                             value="https://www.youtube.com/embed/_YUzQa_1RCE">
+                        <p id="notificationTrailerFimlUpdateError" class="validateUpdate"></p>
                     </div>
                     <div class="input_converage_update">
                         <label for="converage_film_update">Độ nổi bật <span class="obligatory">*</span></label>
@@ -426,12 +435,14 @@
                             <option value="Normal">Normal</option>
                             <option value="Not Popular">Not Popular</option>
                         </select>
+                        <p id="notificationConverageFimlUpdateError" class="validateUpdate"></p>
                     </div>
                 </div>
                 <div class="input_description_update">
                     <label for="description_film_update">Mô tả ngắn <span class="obligatory">*</span></label>
                     <textarea name="Mô tả ngắn" id="description_film_update"
                         placeholder="Nhập tóm tắt nội dung phim...">Tiếp nối phần trước, Paul Atreides hợp nhất với Fremen để trả thù gia tộc Harkonnen và đối mặt với số phận của vũ trụ.</textarea>
+                    <p id="notificationDescriptionFimlUpdateError" class="validateUpdate"></p>
                 </div>
             </div>
             <div class="foot_task_update_film">
@@ -461,6 +472,24 @@
             </div>
         </div>
     </div>
+
+
+    <div class="logout_web">
+        <div class="head_task_logout">
+            <div class="icon_warning">
+                <img src="../assets/icons/icon_delete_film.png" alt="">
+            </div>
+            <h1>Xác nhận đăng xuất</h1>
+            <p>Bạn có chắc chắn muốn đăng xuất không!</p>
+        </div>
+        <div class="foot_task_logout">
+            <div class="btn_in_task_logout">
+                <button class="btn_cancel_logout">Hủy</button>
+                <button class="btn_commit_logout">Xóa ngay</button>
+            </div>
+        </div>
+    </div>
+
     <div id="toast"></div>
     <script src="../js/movie_management_page.js"></script>
 </body>

@@ -36,6 +36,7 @@ let data = JSON.parse(localStorage.getItem("data")) || [
         isActive: false
     }
 ];
+localStorage.setItem("accountAdmin" , "");
 const showToastCorrect = (message1 , message2) => {
     let toastBox = document.getElementById("toast");
     let div = document.createElement("div");
@@ -94,6 +95,7 @@ const checkValidateLogin = () => {
     let count = 0 ;
     data.forEach((element) => {
         if (inputEmail.value == element.email && inputPassword.value == element.password) {
+            localStorage.setItem("accountAdmin" , inputEmail.value);
             showToastCorrect("Đăng nhập thành công", "Chào mừng bạn đến với trang web Rikkei.");
             count ++;
             window.location.href = "../pages/movie_management_page.html";

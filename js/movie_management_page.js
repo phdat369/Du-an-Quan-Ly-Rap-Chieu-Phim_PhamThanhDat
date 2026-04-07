@@ -362,6 +362,9 @@ let btnPrevPage = document.getElementById("btn_prev_page");
 let btnNextPage = document.getElementById("btn_next_page");
 let pages = document.getElementsByClassName("pages")[0];
 let totalPage;
+let emailUser = document.getElementById("emailUser");
+let accountLogin = localStorage.getItem("accountAdmin");
+emailUser.innerText = accountLogin;
 const showToastCorrect = (message1, message2) => {
     let toastBox = document.getElementById("toast");
     let div = document.createElement("div");
@@ -478,8 +481,23 @@ let taskAddFilm = document.getElementsByClassName("add_new_film")[0];
 let overlay = document.getElementsByClassName("overlay")[0];
 let taskUpdateFilm = document.getElementsByClassName("update_film")[0];
 let btnLogout = document.getElementById("img_logout");
+let btnCommitLogout = document.getElementsByClassName("btn_commit_logout")[0];
+let btnCancelLogout = document.getElementsByClassName("btn_cancel_logout")[0];
+let logoutWeb = document.getElementsByClassName("logout_web")[0];
 btnLogout.addEventListener("click", () => {
-    window.location.href = "../pages/login.html";
+    logoutWeb.style.display = "inline";
+    overlay.style.display = "inline";
+    btnCommitLogout.addEventListener("click", () => {
+        showToastCorrect("Thành công", "Đăng xuất thành công");
+        window.location.href = "../pages/login.html";
+        logoutWeb.display.style = "none";
+        overlay.display.style = "none";
+    });
+    btnCancelLogout.addEventListener("click" , () => {
+        showToastError("Thât bại", "Đăng xuất thất bại");
+        logoutWeb.style.display = "none";
+        overlay.style.display = "none";
+    })
 });
 let inputNameFilmAdd = document.getElementById("name_film");
 let inputCategoryFilmAdd = document.getElementById("category_film");
@@ -503,8 +521,26 @@ let notificationPoster3x4FimlAddError = document.getElementById("notificationPos
 let notificationPosterURLFimlAddError = document.getElementById("notificationPosterURLFimlAddError");
 let notificationTrailerFimlAddError = document.getElementById("notificationTrailerFimlAddError");
 let notificationConverageFimlAddError = document.getElementById("notificationConverageFimlAddError");
-let notificationDescriptionFimlAddError= document.getElementById("notificationDescriptionFimlAddError");
+let notificationDescriptionFimlAddError = document.getElementById("notificationDescriptionFimlAddError");
 
+let notificationNameFimlUpdateError = document.getElementById("notificationNameFimlUpdateError");
+let notificationCategoryFimlUpdateError = document.getElementById("notificationCategoryFimlUpdateError");
+let notificationDurationFimlUpdateError = document.getElementById("notificationDurationFimlUpdateError");
+let notificationPremiereFimlUpdateError = document.getElementById("notificationPremiereFimlUpdateError");
+let notificationStatusFimlUpdateError = document.getElementById("notificationStatusFimlUpdateError");
+let notificationPriceFimlUpdateError = document.getElementById("notificationPriceFimlUpdateError");
+let notificationPoster3x4FimlUpdateError = document.getElementById("notificationPoster3x4FimlUpdateError");
+let notificationPosterURLFimlUpdateError = document.getElementById("notificationPosterURLFimlUpdateError");
+let notificationTrailerFimlUpdateError = document.getElementById("notificationTrailerFimlUpdateError");
+let notificationConverageFimlUpdateError = document.getElementById("notificationConverageFimlUpdateError");
+let notificationDescriptionFimlUpdateError = document.getElementById("notificationDescriptionFimlUpdateError");
+
+const checkLinkPicture = (link) => {
+    return link.startsWith("https://");
+}
+const checkLinkTrailer = (linkTrailer) => {
+    return linkTrailer.startsWith("https://www.youtube.com/embed");
+}
 
 const addFilm = () => {
     if (inputNameFilmAdd.value == "") {
@@ -562,7 +598,7 @@ const addFilm = () => {
         inputStatusFilmAdd.style.border = "#553A3B";
     }
 
-    if (inputPriceFilmAdd.value == "" || inputPriceFilmAdd < 0) {
+    if (inputPriceFilmAdd.value == "" || inputPriceFilmAdd.value < 0) {
         notificationPriceFimlAddError.innerText = "Giá vé phim không hợp lệ";
         inputPriceFilmAdd.focus();
         inputPriceFilmAdd.style.border = "red";
@@ -573,7 +609,7 @@ const addFilm = () => {
         inputPriceFilmAdd.style.border = "#553A3B";
     }
 
-    if (inputPoster3x4FilmAdd.value == "") {
+    if (inputPoster3x4FilmAdd.value == "" || checkLinkPicture(inputPoster3x4FilmAdd.value) == false) {
         notificationPoster3x4FimlAddError.innerText = "Poster3x4 phim không hợp lệ";
         inputPoster3x4FilmAdd.focus();
         inputPoster3x4FilmAdd.style.border = "red";
@@ -584,7 +620,7 @@ const addFilm = () => {
         inputPoster3x4FilmAdd.style.border = "#553A3B";
     }
 
-    if (inputPosterURLFilmAdd.value == "") {
+    if (inputPosterURLFilmAdd.value == "" || checkLinkPicture(inputPosterURLFilmAdd.value) == false) {
         notificationPosterURLFimlAddError.innerText = "PosterURL phim không hợp lệ";
         inputPosterURLFilmAdd.focus();
         inputPosterURLFilmAdd.style.border = "red";
@@ -595,7 +631,7 @@ const addFilm = () => {
         inputPosterURLFilmAdd.style.border = "#553A3B";
     }
 
-    if (inputTrailerFilmAdd.value == "") {
+    if (inputTrailerFilmAdd.value == "" || checkLinkTrailer(inputTrailerFilmAdd.value) == false) {
         notificationTrailerFimlAddError.innerText = "Trailer phim không hợp lệ";
         inputTrailerFilmAdd.focus();
         inputTrailerFilmAdd.style.border = "red";
@@ -674,11 +710,11 @@ document.getElementById("add_film").addEventListener("click", () => {
     overlay.style.display = "inline";
 });
 let closeTabAdd = document.getElementById("close_tab_add");
-    closeTabAdd.addEventListener("click", () => {
-        taskAddFilm.style.display = "none";
-        overlay.style.display = "none";
-        showToastError("Đã hủy" , "Đã hủy thao tác.");
-    });
+closeTabAdd.addEventListener("click", () => {
+    taskAddFilm.style.display = "none";
+    overlay.style.display = "none";
+    showToastError("Đã hủy", "Đã hủy thao tác.");
+});
 let btnCommitAddFilm = document.getElementsByClassName("btn_commit")[0];
 let btnCancelAddFiml = document.getElementsByClassName("btn_cancel")[0];
 btnCommitAddFilm.addEventListener("click", addFilm);
@@ -694,7 +730,7 @@ btnCancelAddFiml.addEventListener("click", () => {
     inputDescriptionFilmAdd.value = "";
     inputPriceFilmAdd.value = "";
     inputConverageFilmAdd.value = "";
-    showToastError("Đã hủy" , "Đã hủy thao tác.");
+    showToastError("Đã hủy", "Đã hủy thao tác.");
 });
 let inputNameFilmUpdate = document.getElementById("name_film_update");
 let inputCategoryFilmUpdate = document.getElementById("category_film_update");
@@ -739,6 +775,128 @@ const updateDataFilm = (id) => {
         overlay.style.display = "inline";
     }
     btnCommitUpdate.addEventListener("click", () => {
+
+        if (inputNameFilmUpdate.value == "") {
+            notificationNameFimlUpdateError.innerText = "Tên phim không hợp lệ";
+            inputNameFilmUpdate.focus();
+            inputNameFilmUpdate.style.border = "red";
+            return;
+        }
+        else {
+            notificationNameFimlUpdateError.innerText = "";
+            inputNameFilmUpdate.style.border = "#553A3B";
+        }
+
+        if (inputCategoryFilmUpdate.value == "Chọn thể loại") {
+            notificationCategoryFimlUpdateError.innerText = "Thể loại phim không hợp lệ";
+            inputCategoryFilmUpdate.focus();
+            inputCategoryFilmUpdate.style.border = "red";
+            return;
+        }
+        else {
+            notificationCategoryFimlUpdateError.innerText = "";
+            inputCategoryFilmUpdate.style.border = "#553A3B";
+        }
+
+        if (inputDurationFilmUpdate.value == "" || inputDurationFilmUpdate.value <= 0) {
+            notificationDurationFimlUpdateError.innerText = "Thời lượng phim không hợp lệ";
+            inputDurationFilmUpdate.focus();
+            inputDurationFilmUpdate.style.border = "red";
+            return;
+        }
+        else {
+            notificationDurationFimlUpdateError.innerText = "";
+            inputDurationFilmUpdate.style.border = "#553A3B";
+        }
+
+        if (inputPremiereFilmUpdate.value == "") {
+            notificationPremiereFimlUpdateError.innerText = "Ngày khởi chiếu phim không hợp lệ";
+            inputPremiereFilmUpdate.focus();
+            inputPremiereFilmUpdate.style.border = "red";
+            return;
+        }
+        else {
+            notificationPremiereFimlUpdateError.innerText = "";
+            inputPremiereFilmUpdate.style.border = "#553A3B";
+        }
+
+        if (inputStatusFilmUpdate.value == "") {
+            notificationStatusFimlUpdateError.innerText = "Trạng thái phim không hợp lệ";
+            inputStatusFilmUpdate.focus();
+            inputStatusFilmUpdate.style.border = "red";
+            return;
+        }
+        else {
+            notificationStatusFimlUpdateError.innerText = "";
+            inputStatusFilmUpdate.style.border = "#553A3B";
+        }
+
+        if (inputPriceFilmUpdate.value == "" || inputPriceFilmUpdate.value < 0) {
+            notificationPriceFimlUpdateError.innerText = "Giá vé phim không hợp lệ";
+            inputPriceFilmUpdate.focus();
+            inputPriceFilmUpdate.style.border = "red";
+            return;
+        }
+        else {
+            notificationPriceFimlUpdateError.innerText = "";
+            inputPriceFilmUpdate.style.border = "#553A3B";
+        }
+
+        if (inputPoster3x4FilmUpdate.value == "" || checkLinkPicture(inputPoster3x4FilmUpdate.value) == false) {
+            notificationPoster3x4FimlUpdateError.innerText = "Poster3x4 phim không hợp lệ";
+            inputPoster3x4FilmUpdate.focus();
+            inputPoster3x4FilmUpdate.style.border = "red";
+            return;
+        }
+        else {
+            notificationPoster3x4FimlUpdateError.innerText = "";
+            inputPoster3x4FilmUpdate.style.border = "#553A3B";
+        }
+
+        if (inputPosterURLFilmUpdate.value == "" || checkLinkPicture(inputPosterURLFilmUpdate.value) == false) {
+            notificationPosterURLFimlUpdateError.innerText = "PosterURL phim không hợp lệ";
+            inputPosterURLFilmUpdate.focus();
+            inputPosterURLFilmUpdate.style.border = "red";
+            return;
+        }
+        else {
+            notificationPosterURLFimlUpdateError.innerText = "";
+            inputPosterURLFilmUpdate.style.border = "#553A3B";
+        }
+
+        if (inputTrailerFilmUpdate.value == "" || checkLinkTrailer(inputTrailerFilmUpdate.value) == false) {
+            notificationTrailerFimlUpdateError.innerText = "Trailer phim không hợp lệ";
+            inputTrailerFilmUpdate.focus();
+            inputTrailerFilmUpdate.style.border = "red";
+            return;
+        }
+        else {
+            notificationTrailerFimlUpdateError.innerText = "";
+            inputTrailerFilmUpdate.style.border = "#553A3B";
+        }
+
+        if (inputConverageFilmUpdate.value == "Độ nổi bật" || inputConverageFilmUpdate.value == "") {
+            notificationConverageFimlUpdateError.innerText = "Độ nổi bật phim không hợp lệ";
+            inputConverageFilmUpdate.focus();
+            inputConverageFilmUpdate.style.border = "red";
+            return;
+        }
+        else {
+            notificationConverageFimlUpdateError.innerText = "";
+            inputConverageFilmUpdate.style.border = "#553A3B";
+        }
+
+        if (inputDescriptionFilmUpdate.value == "") {
+            notificationDescriptionFimlUpdateError.innerText = "Mô tả phim không hợp lệ";
+            inputDescriptionFilmUpdate.focus();
+            inputDescriptionFilmUpdate.style.border = "red";
+            return;
+        }
+        else {
+            notificationDescriptionFimlUpdateError.innerText = "";
+            inputDescriptionFilmUpdate.style.border = "#553A3B";
+        }
+
         movies.forEach((element) => {
             if (element.id == id) {
                 element.title = inputNameFilmUpdate.value;
@@ -764,7 +922,7 @@ const updateDataFilm = (id) => {
                 paginationFilm(movies);
                 taskUpdateFilm.style.display = "none";
                 overlay.style.display = "none";
-                showToastCorrect("Đã cập nhật" ,"Cập nhật thông tin thành công!");
+                showToastCorrect("Đã cập nhật", "Cập nhật thông tin thành công!");
             }
         });
     });
@@ -774,7 +932,7 @@ let btnCloseTabUpdate = document.getElementById("close_tab_update");
 btnCloseTabUpdate.addEventListener("click", () => {
     taskUpdateFilm.style.display = "none";
     overlay.style.display = "none";
-    showToastError("Đã hủy" , "Đã hủy thao tác.");
+    showToastError("Đã hủy", "Đã hủy thao tác.");
 })
 btnCancelUpdate.addEventListener("click", () => {
     inputNameFilmUpdate.value = "";
@@ -788,7 +946,7 @@ btnCancelUpdate.addEventListener("click", () => {
     inputTrailerFilmUpdate.value = "";
     inputCategoryFilmUpdate.value = "";
     inputDescriptionFilmUpdate.value = "";
-    showToastError("Đã hủy" , "Đã hủy thao tác.");
+    showToastError("Đã hủy", "Đã hủy thao tác.");
 });
 let btnCancelDelete = document.getElementsByClassName("btn_cancel_delete")[0];
 let btnCommitDelete = document.getElementsByClassName("btn_commit_delete")[0];
@@ -800,7 +958,7 @@ const deleteDataFilm = (id) => {
     btnCancelDelete.addEventListener("click", () => {
         deleteFilmTab.style.display = "none";
         overlay.style.display = "none";
-        showToastError("Đã hủy" , "Đã hủy thao tác.");
+        showToastError("Đã hủy", "Đã hủy thao tác.");
     });
     let check = movies.find((element) => {
         return element.id == id;
@@ -813,7 +971,7 @@ const deleteDataFilm = (id) => {
         paginationFilm(movies);
         deleteFilmTab.style.display = "none";
         overlay.style.display = "none";
-        showToastError("Đã xóa" , "Đã xóa phim thành công!");
+        showToastError("Đã xóa", "Đã xóa phim thành công!");
     })
 }
 
@@ -1256,6 +1414,6 @@ btnNextPage.addEventListener("click", () => {
     };
 });
 let managementTicket = document.getElementsByClassName("management_ticket")[0];
-managementTicket.addEventListener("click" , () => {
+managementTicket.addEventListener("click", () => {
     window.location.href = "../pages/ticket_management_page.html";
 });

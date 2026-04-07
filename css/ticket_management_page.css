@@ -528,6 +528,7 @@ tfoot td {
     width: 1200px;
     border-radius: 16px;
     display: none;
+    z-index: 100;
 }
 .head_page {
     display: flex;
@@ -555,6 +556,7 @@ tfoot td {
     font-family: "Inter", sans-serif;
     font-optical-sizing: auto;
     font-style: normal;
+    cursor: pointer;
 }
 .body_task_add_ticket {
     padding: 20px 40px;
@@ -607,6 +609,12 @@ tfoot td {
     width: 540px;
     color: white;
     padding: 0 20px;
+}
+.update {
+    cursor: pointer;
+}
+.delete {
+    cursor: pointer;
 }
 .input_choose_screeningrate {
     display: flex;
@@ -780,6 +788,7 @@ tfoot td {
     font-family: "Inter", sans-serif;
     font-optical-sizing: auto;
     font-style: normal;
+    cursor: pointer;
 }
 .btn_commit {
     box-shadow: 0px 2px 4px -2px #E60A154D;
@@ -794,6 +803,7 @@ tfoot td {
     font-family: "Inter", sans-serif;
     font-optical-sizing: auto;
     font-style: normal;
+    cursor: pointer;
 }
 
 
@@ -808,6 +818,7 @@ tfoot td {
     width: 1200px;
     border-radius: 16px;
     display: none;
+    z-index: 100;
 }
 .head_page_update {
     display: flex;
@@ -1060,4 +1071,168 @@ tfoot td {
     font-family: "Inter", sans-serif;
     font-optical-sizing: auto;
     font-style: normal;
+}
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    z-index: 10;
+    display: none;
+}
+#toast {
+    position: fixed;
+    top: 100px;
+    right: 60px;
+    width: 384px;
+    height: 76px;
+    border-radius: 8px;
+    padding: 16px;
+    z-index: 1000;
+}
+.toast {
+    background: #1F2937;
+    box-shadow: 0px 4px 6px -4px #0000001A;
+    box-shadow: 0px 10px 15px -3px #0000001A;
+    box-shadow: 0px 0px 0px 1px #FFFFFF1A;
+    width: 384px;
+    height: 76px;
+    border-radius: 8px;
+    padding: 16px;
+    display: flex;
+    gap: 16px;
+    margin-top: 10px;
+}
+.toast img {
+    width: 20px;
+    height: 20px;
+}
+.message_1 {
+    font-weight: 400;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-size: 14px;
+    line-height: 20px;
+    color: #FFFFFF;
+}
+.message_2 {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    color: #CBD5E1;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+.delete_ticket {
+    position: absolute;
+    top: 250px;
+    left: 850px;
+    width: 650px;
+    height: 500px;
+    border-radius: 14px;
+    background: #111827;
+    border: 1px solid #1E293B;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    display: none;
+    z-index: 100;
+}
+.head_task_delete {
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 0 ;
+}
+.icon_warning {
+    background: #7F1D1D33;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 9999px;
+    margin-top: 20px;
+}
+.icon_warning img {
+    width: 29.33333396911621px;
+    height: 25.33333396911621px;
+    position: relative;
+    bottom: 3px;
+    left: 1px;
+}
+.head_task_delete h1 {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 24px;
+    color: #FFFFFF;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    margin-top: 40px;
+}
+.head_task_delete p {
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 30px;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    color: #94A3B8;
+    margin-top: 40px;
+    margin-left: 50px;
+    margin-right: 50px;
+    text-align: center;
+}
+.foot_task_delete {
+    height: 30%;
+    background: #1F2937;
+    width: 100%;
+    display: flex;
+    align-items: center;
+
+}
+.btn_in_task_delete {
+    position: relative;
+    left: 400px;
+}
+.btn_cancel_delete {
+    background: #FFFFFF01;
+    box-shadow: 0px 1px 2px 0px #0000000D;
+    box-shadow: 0px 0px 0px 1px #475569 inset;
+    box-shadow: 0px 0px 0px 0px #FFFFFF inset;
+    border-radius: 8px;
+    width: 60px;
+    height: 45px;
+    color: #CBD5E1;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    cursor: pointer;
+}
+.btn_commit_delete {
+    width: 125px;
+    height: 45px;
+    border-radius: 8px;
+    background: #E70814;
+    box-shadow: 0px 1px 2px 0px #0000000D;
+    color: #FFFFFF;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    margin-left: 10px;
+    cursor: pointer;
 }
